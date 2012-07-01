@@ -9,4 +9,8 @@
     <menuitem id="helloworld-hello" label="&helloworld;" 
               oncommand="HelloWorld.onMenuItemCommand(event);"/>
   </menupopup>
+  <popup id="contentAreaContextMenu">
+    <menuitem id="context-item1" label="Item 1" oncommand="alert('Item1');"/>
+    <menuitem id="context-item2" label="Item 2" oncommand="alert('Item2');"/>
+  </popup>
 </overlay>
