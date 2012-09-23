@@ -1,0 +1,19 @@
+var data = {
+	links : [ {
+		text : "Essentially, it is a method of teaching computers to make and improve predictions or behaviors based on some data. What is this "data"? Well, that depends entirely on the problem. It could be readings from a robot's sensors as it learns to walk, or the correct output of a program for certain input.",
+		label : 'machine learning', "data mining"
+		url : "http://stackoverflow.com/questions/2620343/what-is-machine-learning"
+	}, {
+		text : "node 2 node 2 node 2",
+		label : 'node2',
+		url : "www.url2.org"
+
+	}, 
+	{
+		text : "test1 node 2 node 2 node 2",
+		label : 'node1',
+		url : "www.url4.org"
+
+	}
+	]
+};

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../css/stil1.css" rel="stylesheet" type="text/css">
+<link href="../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="../css/jqtree.css" rel="stylesheet" type="text/css" />
+
+<script src="../js/data.js"></script>
+<script src="../js/makeTree.js"></script>
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="../js/tree.jquery.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+
+<script>
+	$(function() {
+		loadData();
+		var tree = getTreeData();
+
+		$('#tree1').tree({
+			data : tree,
+			dragAndDrop : true
+		});
+		
+		$('#tree1').bind(
+			    'tree.click',
+			    function(event) {
+			        // The clicked node is 'event.node'
+			        var node = event.node;
+			        searchLabel(node.name);
+			    }
+			);
+	});
+
+	
+	function search() {
+		var search = document.getElementById("search");
+		//alert(search.value);
+		searchLabel(search.value);
+		
+		
+		
+	}
+</script>
+
+<title>Search tags</title>
+
+
+
+
+</head>
+<body>
+<body>
+	<div>
+
+		<div id="header">
+			<div class="x">
+				<h1 class="naslov">localTags</h1>
+			</div>
+		</div>
+		<div>
+			<table>
+				
+				<tr>
+				<td   valign="top">
+				
+					<label for="search">Search:</label>
+					<input type="text" name="seach" value="" id="search" title="by tag" />
+					<input type="button" value="Go" onClick="search()" />
+
+					<div id="tree1"
+						style="padding: 10px; width: 300px; border-style: solid; border-color: black; border-width: 1px; float: rigth"></div>
+					
+				<td>
+				
+				
+					<div>
+						<b>Results:</b>
+						<div style="padding: 25px; left: 700 px; position: relative"
+							id="resCont"></div>
+					</div>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+</body>
+</html>
